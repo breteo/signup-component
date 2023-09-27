@@ -88,6 +88,7 @@ select {
 
     --Red: hsl(0, 100%, 74%);
     --Green: hsl(154, 59%, 51%);
+    --Brighter-Green: hsl(154, 100%, 64%);
     
     /*(background) */
     --Blue: hsl(248, 32%, 49%);
@@ -123,7 +124,7 @@ body {
 }
 
 .card {
-  width: 920px;
+  width: 1080px;
   height: 509px;
   display: flex;
   align-items: center;
@@ -178,20 +179,28 @@ body {
 }
 
 .card-signup-container {
-  margin: 1rem;
+  margin: 1.5rem;
+}
+
+input {
+  font-weight: 500;
 }
 
 input[type=text], input[type=password] {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  border-width: .5px;
-  border-color: var(--Dark-Blue);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  outline: none !important;
+  border: 3px solid #555;
 }
 
 .submit-button {
-  width: 100%;
+  width: 90%;
   border: none;
   border-radius: 5px;
   background-color: var(--Green);
@@ -200,6 +209,12 @@ input[type=text], input[type=password] {
   padding: 10px 35px;
   font-size: 16px;
   font-weight: 500;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: var(--Brighter-Green);
+  transition: 0.3s;
 }
 
 .card-signup-container p {
@@ -211,4 +226,8 @@ input[type=text], input[type=password] {
 .card-tos {
   text-decoration: none;
   color: var(--Red);
+}
+
+@media (min-width: 1040px){
+  
 }
