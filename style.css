@@ -1,0 +1,214 @@
+/**************************************/
+/* CSS RESET                          */
+/**************************************/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**************************************/
+/* VARIABLES                         */
+/**************************************/
+
+:root {
+    /* Primary */
+
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    
+    /*(background) */
+    --Blue: hsl(248, 32%, 49%);
+    
+    /* Neutral */
+    
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    
+}
+
+/**************************************/
+/* TYPOGRAPHY                         */
+/**************************************/
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url(images/bg-intro-desktop.png), var(--Red);
+  background-repeat: repeat;
+  background-size: 100%; 
+}
+
+/**************************************/
+/* CLASSES                            */
+/**************************************/
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card {
+  width: 920px;
+  height: 509px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-info {
+  color: White;
+  margin: 2.125rem;
+}
+
+.card-info h1 {
+  color: White;
+  font-size: 2.625rem;
+  padding-bottom: 1rem;
+}
+
+.card-info p {
+  font-size: 0.875rem;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-price {
+  color: white;
+  text-align: center;
+  background-color: var(--Blue);
+  padding: 15px 35px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 15px 15px -8px var(--Dark-Blue);
+}
+
+.card-price p {
+  font-size: .875rem;
+}
+
+.card-price-try {
+  font-weight: bold;
+}
+
+.card-signup {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 15px 15px -8px var(--Dark-Blue);
+}
+
+.card-signup-container {
+  margin: 1rem;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border-radius: 5px;
+  border-width: .5px;
+  border-color: var(--Dark-Blue);
+}
+
+.submit-button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Green);
+  color:white;
+  text-transform: uppercase;
+  padding: 10px 35px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-signup-container p {
+  padding-top: 15px;
+  color: var(--Grayish-Blue);
+  font-size: .625rem;
+}
+
+.card-tos {
+  text-decoration: none;
+  color: var(--Red);
+}
