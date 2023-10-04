@@ -134,6 +134,7 @@ body {
 .card-info {
   color: White;
   margin: 2.125rem;
+  width:45%;
 }
 
 .card-info h1 {
@@ -149,6 +150,7 @@ body {
 .card-form {
   display: flex;
   flex-direction: column;
+  width: 55%;
 }
 
 .card-price {
@@ -184,12 +186,9 @@ body {
 
 input {
   font-weight: 500;
-}
-
-input[type=text], input[type=password] {
   width: 90%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 5px 0 0 0;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -200,6 +199,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .submit-button {
+  text-align: center;
   width: 90%;
   border: none;
   border-radius: 5px;
@@ -218,9 +218,9 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .card-signup-container p {
-  padding-top: 15px;
   color: var(--Grayish-Blue);
   font-size: .625rem;
+  margin-top: 10px;
 }
 
 .card-tos {
@@ -228,6 +228,91 @@ input[type=text]:focus, input[type=password]:focus {
   color: var(--Red);
 }
 
-@media (min-width: 1040px){
+.space {
+  padding: 0.5em 0;
+}
+
+.error {
+  border: 1px solid var(--Red);
+  background-image: url('/images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: right 5% bottom 50%;
+}
+
+.text {
+  font-style: italic;
+  color: var(--Red);
+  font-size: 0.75rem;
+  margin-left: 18rem;
+  margin-top: 0.4em;
+}
+
+@media (max-width: 1035px){
+  body {
+    background: url(images/bg-intro-mobile.png), var(--Red);
+  }
+
+  .card {
+    width: 380px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-info {
+    text-align: center;
+    width:100%
+  }
+
+  .card-info h1 {
+    color: White;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    line-height: 2.625rem;
+  }
+
+  .card-info p {
+    font-size: .9rem;
+  }
+
+  .card-form {
+    width:100%;
+  }
+
+  .card-price {
+    color: white;
+    text-align: center;
+    background-color: var(--Blue);
+    padding: 15px 45px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 15px 15px -8px var(--Dark-Blue);
+
+  }
+
+  .card-price p {
+    font-size: 1.125rem;
+  }
   
+  .card-price-try {
+    font-weight: 600;
+  }
+
+  .card-signup-container p {
+    padding-top: 15px;
+    color: var(--Grayish-Blue);
+    font-size: .875rem;
+  }
+  
+  .card-tos {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--Red);
+  }  
+
+  .text {
+    margin-left: 6rem;
+  }
 }
